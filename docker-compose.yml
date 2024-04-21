@@ -4,6 +4,8 @@ services:
   app:
     build:
       context: . # Use the current directory
+      args:
+        - DEV=true
     ports:
       # Map ports between the host (your machine) and the Docker container.
       # The number before the colon (`8000`) is the port number on the host machine.
