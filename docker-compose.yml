@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: . # Use the current directory
+    ports:
+      # Map ports between the host (your machine) and the Docker container.
+      # The number before the colon (`8000`) is the port number on the host machine.
+      # The number after the colon (`8000`) is the port number inside the Docker container.
+      - "8000:8000"
+    volumes:
+      - ./app:/app
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0: 8000"
