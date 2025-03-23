@@ -1,9 +1,9 @@
 FROM python:3.9-alpine3.13
-LABEL maintainer="vietleuit@gmail.com"
+LABEL maintainer="VietLe"
 
 # Ensures that the Python output is sent straight to terminal (stdout and stderr) and not buffered,
 # which is useful when debugging Python applications, as it allows we to see logs in real-time.
-ENV PYTHONUNBUFFERED 1
+ENV PYTHONUNBUFFERED=1
 
 COPY ./requirements.txt /tmp/requirements.txt
 COPY ./requirements.dev.txt /tmp/requirements.dev.txt
